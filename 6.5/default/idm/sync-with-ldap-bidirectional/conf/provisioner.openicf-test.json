@@ -1,0 +1,61 @@
+{
+    "connectorRef" : {
+        "displayName" : "GoogleApps Connector",
+        "bundleVersion" : "1.4.4.0",
+        "systemType" : "provisioner.openicf",
+        "bundleName" : "org.forgerock.openicf.connectors.googleapps-connector",
+        "connectorName" : "org.forgerock.openicf.connectors.googleapps.GoogleAppsConnector"
+    },
+    "poolConfigOption" : {
+        "maxObjects" : 10,
+        "maxIdle" : 10,
+        "maxWait" : 150000,
+        "minEvictableIdleTimeMillis" : 120000,
+        "minIdle" : 1
+    },
+    "resultsHandlerConfig" : {
+        "enableNormalizingResultsHandler" : false,
+        "enableFilteredResultsHandler" : false,
+        "enableCaseInsensitiveFilter" : false,
+        "enableAttributesToGetSearchResultsHandler" : true
+    },
+    "operationTimeout" : {
+        "CREATE" : -1,
+        "UPDATE" : -1,
+        "DELETE" : -1,
+        "TEST" : -1,
+        "SCRIPT_ON_CONNECTOR" : -1,
+        "SCRIPT_ON_RESOURCE" : -1,
+        "GET" : -1,
+        "RESOLVEUSERNAME" : -1,
+        "AUTHENTICATE" : -1,
+        "SEARCH" : -1,
+        "VALIDATE" : -1,
+        "SYNC" : -1,
+        "SCHEMA" : -1
+    },
+    "configurationProperties" : {
+        "domain" : "https://openidm.dark-knight.example.com",
+        "clientId" : "sdsfdf",
+        "clientSecret" : {
+            "$crypto" : {
+                "type" : "x-simple-encryption",
+                "value" : {
+                    "cipher" : "AES/CBC/PKCS5Padding",
+                    "stableId" : "openidm-sym-default",
+                    "salt" : "NgENnj4fierET/+TdykglQ==",
+                    "data" : "ADyI2nn8jlJr176ADEtd0w==",
+                    "keySize" : 16,
+                    "purpose" : "idm.config.encryption",
+                    "iv" : "KxC5qwmCHgUeQlvBNBfeMQ==",
+                    "mac" : "SncpEQol5CILMHnwQr6zew=="
+                }
+            }
+        },
+        "refreshToken" : null,
+        "proxyHost" : null,
+        "proxyPort" : 8080,
+        "validateCertificate" : true
+    },
+    "enabled" : true
+}
